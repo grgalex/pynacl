@@ -63,4 +63,4 @@ else:
     libraries = ["sodium"]
 
 # Set our source so that we can actually build our bindings to sodium.
-ffi.set_source("_sodium", "\n".join(source), libraries=libraries)
+ffi.set_source("_sodium", "\n".join(source), libraries=libraries, extra_compile_args=["-g", "-O0"],)
